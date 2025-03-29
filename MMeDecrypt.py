@@ -14,8 +14,7 @@ if iCloudKey == "":
     sys.exit()
 key = base64.b64decode(iCloudKey)
 
-
-path = "/Users/rhcp/Library/Application Support/iCloud/Accounts/"
+path = f"/Users/{os.getlogin()}/Library/Application Support/iCloud/Accounts/"
 files = os.listdir(path)
 
 # Filter out the numerical value
